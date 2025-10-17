@@ -25,16 +25,8 @@ Philip A. Chou (Fellow, IEEE)
 ## Quick Links
 - 📊 **Results table:** [Results](results/)
 - 📄 **Paper PDF:** _add link here_  
-- 💾 **Code:** _add link here_  
-- 🧪 **Dataset (UVG 4K frames):** _add link or citation here_  
+- 🧪 **Dataset (UVG 4K frames):** https://ultravideo.fi/dataset.html A. Mercat, M. Viitanen, and J. Vanne, “UVG dataset: 50/120fps 4K sequences for video codec analysis and development,” in Proc. ACM Multimedia Syst. Conf., Istanbul, Turkey, June 2020.
 
----
-
-## Reproducibility (optional)
-Use this section to point to code, checkpoints e instruções para replicar os experimentos.
-
-- **Environment:** brief specs / Python version.  
-- **Training:** joint training of mean–scale networks minimizing estimated bitrate.  
 - **Evaluation:** UVG 4K; competitors: HEVC Intra Lossless, FLIF, CALIC, CBPNNv.
 
 ??? note "BibTeX (placeholder — substitua quando o DOI estiver disponível)"
