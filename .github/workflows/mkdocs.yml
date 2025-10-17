@@ -1,38 +1,28 @@
-site_name: Supplement – Context-Adaptive Distributions for Neural-Based Lossless Image Compression
-site_description: Supplementary page with abstract and results for the paper "Context-Adaptive Distributions for Neural-Based Lossless Image Compression".
-site_dir: site
+name: Deploy MkDocs
 
-theme:
-  name: material
-  features:
-    - navigation.tabs
-    - navigation.sections
-    - navigation.instant
-    - content.code.copy
-    - content.tabs.link
-    - toc.integrate
-  icon:
-    repo: fontawesome/brands/github
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
 
-nav:
-  - Home: index.md
-  - Results: results.md
+permissions:
+  contents: write
 
-plugins:
-  - search
-
-markdown_extensions:
-  - admonition
-  - attr_list
-  - def_list
-  - footnotes
-  - tables
-  - toc:
-      permalink: true
-  - pymdownx.details
-  - pymdownx.superfences
-  - pymdownx.inlinehilite
-  - pymdownx.highlight
-
-# repo_url: https://github.com/<usuario>/paper-supplement
-# repo_name: <usuario>/paper-supplement
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install mkdocs mkdocs-material
+      - name: Build site
+        run: mkdocs build --strict
+      - name: Deploy to GitHub Pages
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: mkdocs gh-deploy --force
