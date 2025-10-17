@@ -17,7 +17,3 @@ mkdocs gh-deploy  # deploy to GitHub Pages
 - `docs/index.md` – cover / abstract
 - `docs/results.md` – results table
 - `.github/workflows/mkdocs.yml` – (optional) CI to build and deploy on each push to `main`
-
-## Notes
-- Replace placeholder links (PDF, code, dataset) in `docs/index.md`.
-- You can enable the CI workflow by pushing on GitHub and making sure Pages is enabled for the repo.
