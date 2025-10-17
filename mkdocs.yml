@@ -2,6 +2,9 @@ site_name: Supplement – Context-Adaptive Distributions for Neural-Based Lossle
 site_description: Supplementary page with abstract and results for the paper "Context-Adaptive Distributions for Neural-Based Lossless Image Compression".
 site_dir: site
 
+repo_url: https://github.com/VictorFabreF/Context-Adaptive-Distributions
+repo_name: VictorFabreF/Context-Adaptive-Distributions   # opcional
+
 theme:
   name: material
   features:
@@ -34,5 +37,3 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.highlight
 
-# repo_url: https://github.com/<usuario>/paper-supplement
-# repo_name: <usuario>/paper-supplement
